@@ -1,0 +1,2579 @@
+{
+	"info": {
+		"_postman_id": "a221ac05-bbc2-4005-9fd5-089301c03538",
+		"name": "BigProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Get Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer dcfcab6e8f1f1d4244173779f121a317c954974f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "offset",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "userRole",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/user",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 21af3ae057565330d8246f1db383330bb097b1c8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "s3Kol4HQA!*",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Organization Information",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 313ec1c150c21dda078f7c6570bf864323eed832",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/organization",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"organization"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attendance",
+			"item": [
+				{
+					"name": "Punch in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 313ec1c150c21dda078f7c6570bf864323eed832",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "0246",
+									"type": "text"
+								},
+								{
+									"key": "timezone",
+									"value": "Asia/Jakarta",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "libur",
+									"type": "text"
+								},
+								{
+									"key": "datetime",
+									"value": "2021-05-27 16:25",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/punch-in",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"punch-in"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Punch out",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 313ec1c150c21dda078f7c6570bf864323eed832",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "0246",
+									"type": "text"
+								},
+								{
+									"key": "timezone",
+									"value": "Asia/Jakarta",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "libur",
+									"type": "text"
+								},
+								{
+									"key": "datetime",
+									"value": "2021-05-27 16:25",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/punch-out",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"punch-out"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Save Employee",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer dcfcab6e8f1f1d4244173779f121a317c954974f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstName",
+									"value": "QA",
+									"type": "text"
+								},
+								{
+									"key": "middleName",
+									"value": "Avif",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Testing",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "1122",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer b953888531ae8a9754aa1d0fcae0ff2266cfd613",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "99",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "99"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee Detail",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 0f9cf1a66544260e9ba881cf26d31d063363408a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "firstName",
+									"value": "Firnanda",
+									"type": "text"
+								},
+								{
+									"key": "middleName",
+									"value": "Avif",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Dewantara",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "9988",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "dob",
+									"value": "2005-12-30",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "licenseNumber",
+									"value": "123",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "licenseNumberExpDate",
+									"value": "2005-12-30",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "maritalStatus",
+									"value": "single",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "otherId",
+									"value": "77",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "nationality",
+									"value": "indonesia",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "176"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Terminate Employment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 0f9cf1a66544260e9ba881cf26d31d063363408a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "176",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2005-12-30",
+									"type": "text"
+								},
+								{
+									"key": "reason",
+									"value": "deleted",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "yes",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/action/terminate",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"action",
+								"terminate"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "176"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Employee Contact Detail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 9eb40089c3674ab13481ee097f1c91e37e440a90",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "addressStreet1",
+									"value": "abc",
+									"type": "text"
+								},
+								{
+									"key": "addressStreet2",
+									"value": "abcd",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "malang",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "jawa timur",
+									"type": "text"
+								},
+								{
+									"key": "zip",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "indonesia",
+									"type": "text"
+								},
+								{
+									"key": "homeTelephone",
+									"value": "0812345678",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "0987654321",
+									"type": "text"
+								},
+								{
+									"key": "workTelephone",
+									"value": "0812345678",
+									"type": "text"
+								},
+								{
+									"key": "workEmail",
+									"value": "mail@mailinator.com",
+									"type": "text"
+								},
+								{
+									"key": "otherEmail",
+									"value": "mail1@mailinator.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/contact-detail",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"contact-detail"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 0f9cf1a66544260e9ba881cf26d31d063363408a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Firnanda Avif Dewantara",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "0246",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/search",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Contact Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 0f9cf1a66544260e9ba881cf26d31d063363408a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/contact-detail",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"contact-detail"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "176"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee Contact Detail",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 9eb40089c3674ab13481ee097f1c91e37e440a90",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "112",
+									"type": "text"
+								},
+								{
+									"key": "addressStreet1",
+									"value": "abcd1",
+									"type": "text"
+								},
+								{
+									"key": "addressStreet2",
+									"value": "abcd2",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "malang",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "jawa timur",
+									"type": "text"
+								},
+								{
+									"key": "zip",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "indonesia",
+									"type": "text"
+								},
+								{
+									"key": "homeTelephone",
+									"value": "0812345678",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "0987654321",
+									"type": "text"
+								},
+								{
+									"key": "workTelephone",
+									"value": "0812345678",
+									"type": "text"
+								},
+								{
+									"key": "workEmail",
+									"value": "mail@mailinator.com",
+									"type": "text"
+								},
+								{
+									"key": "otherEmail",
+									"value": "mail12@mailinator.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/contact-detail",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"contact-detail"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Employee Dependent",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 9eb40089c3674ab13481ee097f1c91e37e440a90",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Firnanda Avif Dewantara",
+									"type": "text"
+								},
+								{
+									"key": "relationship",
+									"value": "Worker",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "1989-09-02",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/dependent",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"dependent"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Dependents",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 9eb40089c3674ab13481ee097f1c91e37e440a90",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/dependent",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"dependent"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee Dependents",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 9eb40089c3674ab13481ee097f1c91e37e440a90",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Avif Dewantara",
+									"type": "text"
+								},
+								{
+									"key": "relationship",
+									"value": "Manager",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "1989-09-02",
+									"type": "text"
+								},
+								{
+									"key": "sequenceNumber",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/dependent",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"dependent"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee Dependents",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 9eb40089c3674ab13481ee097f1c91e37e440a90",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "sequenceNumber",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/dependent",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"dependent"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Employee Job Detail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer d7bd2b152f384136efe4866796147906b28fda22",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "subunit",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "joinedDate",
+									"value": "2021-01-01",
+									"type": "text"
+								},
+								{
+									"key": "startDate",
+									"value": "2021-01-01",
+									"type": "text"
+								},
+								{
+									"key": "endDate",
+									"value": "2021-01-02",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/job-detail",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"job-detail"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Job Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer d7bd2b152f384136efe4866796147906b28fda22",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/job-detail",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"job-detail"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee Job Detail",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer d7bd2b152f384136efe4866796147906b28fda22",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "subunit",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "joinedDate",
+									"value": "2021-01-01",
+									"type": "text"
+								},
+								{
+									"key": "startDate",
+									"value": "2021-01-02",
+									"type": "text"
+								},
+								{
+									"key": "endDate",
+									"value": "2021-01-03",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/job-detail",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"job-detail"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Supervisor Details",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 306604687e2cf4319d60b8d17ca25aa5c7b6a678",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "supervisorId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "reportingMethod",
+									"value": "Direct",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/supervisor",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"supervisor"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "176"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Supervisor Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer d7bd2b152f384136efe4866796147906b28fda22",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/supervisor",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"supervisor"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Supervisor Details",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer d7bd2b152f384136efe4866796147906b28fda22",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "supervisorId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "reportingMethod",
+									"value": "Online",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/supervisor",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"supervisor"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Supervisor Details",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer d7bd2b152f384136efe4866796147906b28fda22",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "supervisorId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "reportingMethod",
+									"value": "Online",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/supervisor",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"supervisor"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Employee Events",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 313ec1c150c21dda078f7c6570bf864323eed832",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "employeeId",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "fromDate",
+									"value": "2021-01-01",
+									"type": "text"
+								},
+								{
+									"key": "toDate",
+									"value": "2021-01-02",
+									"type": "text"
+								},
+								{
+									"key": "event",
+									"value": "UPDATE",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "contact",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/event",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Employee Work Experience",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 93655aa5c2a701991a2a24e9585b87552517cfb1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "pt jaya",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "worker",
+									"type": "text"
+								},
+								{
+									"key": "fromDate",
+									"value": "2002-01-01",
+									"type": "text"
+								},
+								{
+									"key": "toDate",
+									"value": "2003-01-01",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "yes",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/work-experience",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"work-experience"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Work Experience",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 93655aa5c2a701991a2a24e9585b87552517cfb1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/work-experience",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"work-experience"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee Work Experience",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 93655aa5c2a701991a2a24e9585b87552517cfb1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "seqId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "pt jaya abadi",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "manager",
+									"type": "text"
+								},
+								{
+									"key": "fromDate",
+									"value": "2003-01-01",
+									"type": "text"
+								},
+								{
+									"key": "toDate",
+									"value": "2003-01-05",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "ok",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/work-experience",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"work-experience"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee Work Experience",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 93655aa5c2a701991a2a24e9585b87552517cfb1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "seqId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/work-experience",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"work-experience"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Employee Education",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 93655aa5c2a701991a2a24e9585b87552517cfb1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "level",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "seqId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "institute",
+									"value": "University",
+									"type": "text"
+								},
+								{
+									"key": "startDate",
+									"value": "1990-01-10",
+									"type": "text"
+								},
+								{
+									"key": "endDate",
+									"value": "1994-01-10",
+									"type": "text"
+								},
+								{
+									"key": "specialization",
+									"value": "mechanic",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "gpa",
+									"value": "4.00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/education",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"education"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Education",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 93655aa5c2a701991a2a24e9585b87552517cfb1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/education",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"education"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee Education",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 93655aa5c2a701991a2a24e9585b87552517cfb1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "level",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "seqId",
+									"value": "21",
+									"type": "text"
+								},
+								{
+									"key": "institute",
+									"value": "University",
+									"type": "text"
+								},
+								{
+									"key": "startDate",
+									"value": "2002-01-10",
+									"type": "text"
+								},
+								{
+									"key": "endDate",
+									"value": "2006-01-10",
+									"type": "text"
+								},
+								{
+									"key": "specialization",
+									"value": "linguistic",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "gpa",
+									"value": "4.00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/education",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"education"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee Education",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 93655aa5c2a701991a2a24e9585b87552517cfb1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "seqId",
+									"value": "21",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/education",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"education"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Employee Custom Field",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer dcfcab6e8f1f1d4244173779f121a317c954974f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "fieldId",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "chronicle",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/custom-field",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"custom-field"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Custom Field",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 93655aa5c2a701991a2a24e9585b87552517cfb1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/custom-field",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"custom-field"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee Custom Field",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 93655aa5c2a701991a2a24e9585b87552517cfb1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "fieldId",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "Kelas QA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/custom-field",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"custom-field"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Custom Field",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 93655aa5c2a701991a2a24e9585b87552517cfb1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "yes",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "AAA",
+									"type": "text"
+								},
+								{
+									"key": "screen",
+									"value": "Personal",
+									"type": "text"
+								},
+								{
+									"key": "extraData",
+									"value": "yes",
+									"type": "text"
+								},
+								{
+									"key": "Data",
+									"value": "ok",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/custom-field",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"custom-field"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee Custom Field",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 93655aa5c2a701991a2a24e9585b87552517cfb1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								},
+								{
+									"key": "fieldId",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/custom-field",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"custom-field"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Picture",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer dcfcab6e8f1f1d4244173779f121a317c954974f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "77",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://qa.cilsy.id/symfony/web/index.php/api/v1/employee/:id/photo",
+							"protocol": "http",
+							"host": [
+								"qa",
+								"cilsy",
+								"id"
+							],
+							"path": [
+								"symfony",
+								"web",
+								"index.php",
+								"api",
+								"v1",
+								"employee",
+								":id",
+								"photo"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "77"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "1209",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "Avif71*?",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://qa.cilsy.id/symfony/web/index.php/oauth/issueToken",
+					"protocol": "http",
+					"host": [
+						"qa",
+						"cilsy",
+						"id"
+					],
+					"path": [
+						"symfony",
+						"web",
+						"index.php",
+						"oauth",
+						"issueToken"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
